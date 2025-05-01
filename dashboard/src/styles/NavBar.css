@@ -1,0 +1,8 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px; /* Adjust height as needed */
+    border-bottom: 2px solid #ccc; /* Adjust thickness and color as needed */
+    width: 100%;
+}

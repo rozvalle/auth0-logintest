@@ -1,5 +1,7 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
+import { Avatar } from "antd"; // Assuming you're using Ant Design for UI components
+import '../styles/UserBadge.css'; // Assuming you have a CSS file for styling
 
 const UserBadge = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -8,15 +10,17 @@ const UserBadge = () => {
     return <div>Loading ...</div>;
   }
 
-  return (
+return (
     isAuthenticated && (
-      <div>
-        <img src={user.picture} alt={user.name} />
-        <h2>{user.name}</h2>
-        <p>{user.email}</p>
-      </div>
+        <div className="user-badge">
+            <Avatar src={user.picture} alt={user.name} size={50} shape="square" />
+            <div className="user-info">
+                    <p style={{fontWeight:500, marginBottom:'-10'}}>{user.name}</p>
+                    <p style={{color:'gray'}}>{user.email}</p>
+            </div>
+        </div>
     )
-  );
+);
 };
 
 export default UserBadge;
