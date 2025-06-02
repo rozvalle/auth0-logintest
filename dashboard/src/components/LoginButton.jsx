@@ -8,4 +8,16 @@ const LoginButton = () => {
   return <Button onClick={() => loginWithRedirect()}>Log In</Button>;
 };
 
-export default LoginButton;
+export default () => {
+  const { loginWithRedirect } = useAuth0();
+
+  return (
+    <Button
+      type="default"
+      style={{ background: "transparent", border: "1px solid #1890ff", color: "#1890ff" }}
+      onClick={() => loginWithRedirect()}
+    >
+      Log In
+    </Button>
+  );
+};
