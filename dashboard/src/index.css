@@ -1,10 +1,28 @@
 body {
   font-family: 'Poppins';
+  margin: 0;
 }
 
 .ant-menu {
   font-family: 'Poppins', sans-serif;
 }
 .ant-button {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
 }
+.ant-btn,
+.ant-btn-primary,
+.ant-btn-dangerous,
+.ant-btn-link,
+.ant-btn-text,
+.ant-btn-default,
+.ant-btn-dashed,
+.ant-btn-ghost,
+.ant-btn-lg,
+.ant-btn-sm {
+  font-family: 'Poppins', sans-serif !important;
+}
+
+.ant-menu-item {
+  border-radius: 5px !important;
+  line-height: 2.5 !important;
+} 
